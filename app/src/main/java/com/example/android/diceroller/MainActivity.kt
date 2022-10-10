@@ -39,8 +39,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice() {
-        val randomInt = Random().nextInt(6) + 1
-        val drawableResource = when (randomInt) {
+        fun rand(start: Int, end: Int): Int {
+            require(start <= end) { "Illegal Argument" }
+            return (start..end).shuffled().first()
+        }
+
+        val drawableResource = when (rand(1,5)) {
             1 -> R.drawable.capi1_adobe_express
             2 -> R.drawable.capi2_adobe_express
             3 -> R.drawable.capi3_adobe_express
