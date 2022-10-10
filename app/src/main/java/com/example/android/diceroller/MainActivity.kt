@@ -41,12 +41,11 @@ class MainActivity : AppCompatActivity() {
     private fun rollDice() {
         val randomInt = Random().nextInt(6) + 1
         val drawableResource = when (randomInt) {
-            1 -> R.drawable.dice_1
-            2 -> R.drawable.dice_2
-            3 -> R.drawable.dice_3
-            4 -> R.drawable.dice_4
-            5 -> R.drawable.dice_5
-            else -> R.drawable.dice_6
+            1 -> R.drawable.capi1_adobe_express
+            2 -> R.drawable.capi2_adobe_express
+            3 -> R.drawable.capi3_adobe_express
+            4 -> R.drawable.capi4_adobe_express
+            else -> R.drawable.capi5_adobe_express
         }
 
         diceImage.setImageResource(drawableResource)
